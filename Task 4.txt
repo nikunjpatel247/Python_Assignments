@@ -1,0 +1,181 @@
+#1
+
+t = "consultadd"[::-1]
+print(t)
+
+#2
+
+string=(input("Enter string:"))
+count1=0
+count2=0
+for i in string:
+      if(i.islower()):
+            count1=count1+1
+      elif(i.isupper()):
+            count2=count2+1
+print("The number of lowercase characters is:")
+print(count1)
+print("The number of uppercase characters is:")
+print(count2)
+
+#3
+
+def unique_list(l):
+  x = []
+  for a in l:
+    if a not in x:
+      x.append(a)
+  return x
+
+print(unique_list([1,2,3,3,3,3,4,5])) 
+
+#4
+
+items=[n for n in input("enter hyphen-separated sequence: ").split('-')]
+items.sort()
+print('-'.join(items))
+
+#5
+
+lines = []
+while True:
+    l = input("sequence of lines: ")
+    if l:
+        lines.append(l.upper())
+    else:
+        break;
+
+for l in lines:
+    print(l)
+
+#6
+
+def calculateSumFor(first,second):
+  return int(first) + int(second)
+firstNumber = "100"
+secondNumber = "200"
+print(calculateSumFor(firstNumber,secondNumber))
+
+#7
+
+def length_of_string(str1, str2):
+	if (len(str1) == len(str2)):
+		print(str1)
+		#print("\n")
+		print(str2)
+
+	elif (len(str1) < len(str2)):
+		print(str2)
+	
+	else:
+		print(str1)
+
+stri1 = input(str("enter First String: "))
+stri2 = input(str("enter Second String: "))
+
+print("\n")
+
+length_of_string(stri1, stri2)
+
+#8
+
+def printValues():
+	l = list()
+	for i in range(1,21):
+		l.append(i**2)
+	print(l)
+		
+printValues()
+
+#9
+
+def shownumber(limit):
+
+    for i in range(0, limit):
+        if i==0:
+            print(i,end=" ")
+            print("EVEN")
+        elif i%2==0:
+            print(i,end=" ")
+        print("EVEN")
+    else:
+        print(i,end=" ")
+        print("ODD")
+print(shownumber(4))
+
+#10
+
+li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+evenNumbers = filter(lambda x: x%2==0, li)
+print (list(evenNumbers))
+
+#11
+
+li = [1,2,3,4,5,6,7,8,9,10]
+ 
+eve_num = map(lambda x: x**2, filter(lambda   x: x%2==0, li))
+ 
+print(list(eve_num))
+
+#12
+
+def divide():
+    return 5/0
+
+try:
+    divide()
+except ZeroDivisionError as ze:
+    print("Why on earth you are dividing a number by ZERO!!")
+except:
+    print("Any other exception")
+
+#13
+
+import functools
+import operator
+
+List = [[1,2,3],[4,5,6],[7,8,9]] 
+
+List_flat = functools.reduce(operator.iconcat, List, [])
+
+print("Original List:",List)
+print("Flattened List:",List_flat)
+
+#14
+
+#15
+
+numbers = [1, 2, 3, 4, 5]
+result = map(lambda x: x * x, numbers)
+print(list(result))
+
+#16
+(i)
+def foo():
+    try:
+        return 1
+    finally:
+        return 2
+k = foo()
+print(k)
+
+Output: 2
+
+(ii)
+
+def a():
+    try:
+        f(x, 4)
+    finally:
+        print('after f')
+        print('after f?')
+a()
+
+
+Output
+
+ File "C:\Users\nikun\Desktop\New folder\t33.py", line 7, in <module>
+    a()
+  File "C:\Users\nikun\Desktop\New folder\t33.py", line 3, in a
+    f(x, 4)
+NameError: name 'f' is not defined
