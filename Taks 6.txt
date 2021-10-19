@@ -1,0 +1,36 @@
+#1
+
+x = [i for i in "Hello World" if i.isupper()]
+print(x)
+
+#2
+
+students = ['Smit', 'Jaya', 'Rayyan'] 
+subjects = ['CSE', 'Networking', 'Operating System']
+
+student = zip(students,subjects)
+dict = {k:v for (k,v) in student}
+print(dict)
+
+#3 Learn More about Yield, next and Generators
+
+#4
+
+def str(Input_Str):
+    yield Input_Str[::-1]
+
+for i in str("Consultadd Training"):
+    print(i)
+
+#5
+
+def make_pretty(func):
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+
+def ordinary():
+    print("I am ordinary")
+
